@@ -18,7 +18,7 @@
          url('OpenSans-Regular-webfont.svg#open_sanslight') format('svg');
 }
    
-@media screen and (min-width:1200px){
+@media screen and (min-width:1px){
     
     html, body{
         height: 100%;
@@ -47,6 +47,22 @@
         position: relative;
         height: 60px;
         border-bottom: 1px solid black; 
+    }
+
+    #hamburger{
+        height: 60px;
+        width: auto;
+        position: relative;
+        background-color: transparent;
+        border: 0px solid black;
+        float: right;
+        padding-right: 25px;
+        padding-left: 25px;
+        visibility: hidden;
+    }
+
+    #hamburger:hover{
+        cursor: pointer;
     }
 
     #footer{
@@ -175,12 +191,13 @@
     #bodyButton{
         position: relative;
         background-color: transparent;
-        border: 0px solid black;
+        border: 1px solid black;
+        border-radius: 7px;
         height: 60px;
         width: auto;
         margin-left: auto;
         margin-right: auto;
-        padding: 0;
+        padding: 0 20px 0 20px;
     }
 
     #bodyButton:hover{
@@ -325,7 +342,7 @@
 
 }
 
-@media screen and (max-width:1200px){
+@media screen and (max-width:1px){
     
     html, body{
         height: 100%;
@@ -338,7 +355,7 @@
     #wrapper{
         background-color: transparent; 
         position: relative;
-        width: 1200px; 
+        width: 100%; 
         margin-left: auto;
         margin-right: auto;   
     }
@@ -375,6 +392,21 @@
         
     }
 
+    #hamburger{
+        height: 60px;
+        width: auto;
+        position: relative;
+        background-color: transparent;
+        border: 0px solid black;
+        float: right;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+
+    #hamburger:hover{
+        cursor: pointer;
+    }
+
     /*CHANGE width to auto and make buttons absolute */
     #button{
         position: relative;
@@ -385,6 +417,7 @@
         float: left;
         padding-right: 25px;
         padding-left: 25px;
+        visibility: hidden;
     }
 
     #button:hover{
@@ -444,9 +477,8 @@
         background-color: transparent;
         position: relative;
         display: flex;
-        height: 539px;
         width: 1200px;
-        overflow: hidden;
+        height: auto;
         margin-left: auto;
         margin-right: auto;
         align-content: center;
@@ -482,7 +514,8 @@
     #bodyButton{
         position: relative;
         background-color: transparent;
-        border: 0px solid black;
+        border: 2px solid black;
+        border-radius: 10px;
         height: 60px;
         width: auto;
         margin-left: auto;

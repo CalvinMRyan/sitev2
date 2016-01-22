@@ -26,18 +26,21 @@
             <button id="button" onclick="location.href='photography.html'" class="photography">
                 <p id="buttonText">Photography</p>
             </button>
+            <button id="hamburger">
+                <img id="hamburger" src="images/hamburgers.jpg" />
+            </button>
         </div>
         
         <div id="body">
             <div id="photoScroller">
-                <img src="images/home.jpg" , class="home active" />
+                <img src="images/home.jpg" class="home active" />
                 <img src="images/bikelight/bikelight0.jpg" class="projects" />
                 <img src="images/landscapes/landscapes0.jpg" class="photography" />
             </div>
 
             <p id="bodyTitleText"> About me </p>
 
-            <p id="bodyText"> I'm Calvin. I study electrical engineering at Northeastern University in Boston, MA. I have a passion for recognizing problems and pursuing solutions in fields ranging from sustainability to design.    
+            <p id="bodyText"> I'm Calvin. I'm a third year electrical engineering student at Northeastern University in Boston, MA. I have a passion for recognizing problems and pursuing solutions in fields ranging from sustainability to design.    
             </p>
 
             <div style="height: 50px"></div>
@@ -91,7 +94,7 @@
             newSlide.addClass('active'); //set next image to active
             activeSlide.removeClass('active');
             newSlide.animate({ opacity: 1.0 }, speed, function () {
-                activeSlide.removeClass('active inactive') //function must be in animate because otherwise it completes before animation completes? Incorrect theory I believe, but it works
+                activeSlide.removeClass('active inactive') 
             });
         }
 
