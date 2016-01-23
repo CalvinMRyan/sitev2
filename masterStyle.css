@@ -47,7 +47,11 @@
         background-color: transparent;
         position: relative;
         height: 60px;
-        border-bottom: 1px solid black; 
+        /*display: flex;
+        justify-content: center;*/
+
+        border-bottom: 1px solid black;
+         
     }
 
     #hamburger{
@@ -91,7 +95,7 @@
         background-color: transparent;
         border: 0px solid black;
         height: 60px;
-        width: 205px;
+        width: 400px;
         float: left;
         padding-right: 25px;
         padding-left: 25px;

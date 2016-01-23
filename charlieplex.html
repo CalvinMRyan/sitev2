@@ -3,7 +3,12 @@
 
 <head>
     <meta name="viewport" content="width=device-width, height=device-height, initial scale=1.0" />
+
     <link rel="stylesheet" type="text/css" href="masterStyle.css" charset="utf-8">
+
+    <Title> Charlieplexed LED Tree | Calvin Ryan</Title>
+
+    <link rel="icon" href="CR-Logo.png" />
 </head>
 
 <body>
@@ -26,6 +31,8 @@
         </div>
 
         <div id="body">
+
+            <div style="height: 70px"></div>
 
             <p id="contentText"> Arduino is a great platform - until you attempt any project requiring more than the few available I/O ports. To combat this you can use charlieplexing. This technique combines the Arduino's capability to set I/O pins as high output, low output, and input and the current flow limiting property of diodes. By setting the output on one side of a diode low, the output on the other side high, and all other I/O pins to a high impedance input you can allow current to flow through a specific path.  Below is a demonstration of this I created using LEDs.  </p>
 
