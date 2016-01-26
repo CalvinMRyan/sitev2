@@ -167,6 +167,10 @@
         justify-content: center;
     }
 
+    #photoScroller img:hover{
+        cursor: pointer;
+    }
+
     #bodyTitleText{
         font-size: 26px;
         font-family: 'Open Sans';
