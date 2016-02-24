@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, height=device-height, initial scale=1.0" />
+    <meta name="viewport" content="width=device-width, height=device-height, initial scale=1.0"/>
 
     <link rel="stylesheet" type="text/css" href="masterStyle.css" charset="utf-8">
 
@@ -30,49 +30,43 @@
             </button>
         </div>
 
-        <div id="body">
-            <div id="bodyNav">
-                <button id="bodyButton" onclick="location.href='landscapes.html'">
-                    <p id="buttonText">Landscapes</p>
-                </button>
+        <div style="height: 54px;"></div>
+
+        <div id="subPageBody">
+
+            <div id="subPageRow">
+                <div id="subPageBodyImageContainer">
+                    <img id="subPageBodyImage" src="images/landscapes/landscapes0.jpg" />
+                    <div id="subPageImageHoverOverlay" onclick="location.href='landscapes.html'"></div>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; font-weight: 400; "> Landscapes</p>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; margin-right: 40px; font-weight: 100;"><br /><br />Our pale blue dot.</p>
+
+                </div>
+
+                <div id="subPageBodyImageContainer">
+                    <img id="subPageBodyImage" src="images/portraits/portraits0.jpg" />
+                    <div id="subPageImageHoverOverlay" onclick="location.href='portraits.html'"></div>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; font-weight: 400; "> Portraits </p>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; margin-right: 40px; font-weight: 100;"><br /><br />The people.</p>
+                </div>
+            
+                <div id="subPageBodyImageContainer">
+                    <img id="subPageBodyImage" src="images/architecture/architecture0.jpg" />
+                    <div id="subPageImageHoverOverlay" onclick="location.href='architecture.html'"></div>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; font-weight: 400; "> Architecture</p>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; margin-right: 40px; font-weight: 100;"><br /><br />The structures.</p>
+                </div>      
             </div>
 
-            <p id="bodyText"> Our pale blue dot.</p>
+            <div id="subPageRow" style="justify-content: flex-start ">
+                <div id="subPageBodyImageContainer">
+                    <img id="subPageBodyImage" src="images/nature/nature0.jpg" />
+                    <div id="subPageImageHoverOverlay" onclick="location.href='nature.html'"></div>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; font-weight: 400; "> Nature</p>
+                    <p id="subPageImageHoverText" style="text-align: left; top: 40px; left: 40px; margin-right: 40px; font-weight: 100;"><br /><br />The surroundings.</p>
+                </div>
 
-            <img id="bodyImage" onclick="location.href='landscapes.html'" title ="Landscapes" src="images/landscapes/landscapes0.jpg" />
-
-
-            <div id="bodyNav" onclick="location.href = 'portraits.html'">
-                <button id="bodyButton">
-                    <p id="buttonText">Portraits</p>
-                </button>
             </div>
-
-            <p id="bodyText"> The people. </p>
-
-            <img id="bodyImage" onclick="location.href='portraits.html'" title ="Portraits" src="images/portraits/portraits0.jpg" />
-
-
-            <div id="bodyNav" onclick="location.href = 'architecture.html'">
-                <button id="bodyButton">
-                    <p id="buttonText">Architecture</p>
-                </button>   
-            </div>
-
-            <p id="bodyText"> The structures. </p>
-
-            <img id="bodyImage" onclick="location.href='architecture.html'" title ="Architecture" src="images/architecture/architecture0.jpg" />
-
-
-            <div id="bodyNav" onclick="location.href = 'nature.html'">
-                <button id="bodyButton">
-                    <p id="buttonText">Nature</p>
-                </button>
-            </div>
-
-            <p id="bodyText"> The surroundings. </p>
-
-            <img id="bodyImage" onclick="location.href='nature.html'" title ="Nature" src="images/nature/nature0.jpg" />
 
         </div>
 

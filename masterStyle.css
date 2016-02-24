@@ -18,6 +18,17 @@
          url('OpenSans-Regular-webfont.svg#open_sanslight') format('svg');
 }
    
+@font-face{
+    font-family: 'Open Sans';
+    font-weight: 100;
+    font-style: italic;
+    src: url('OpenSans-LightItalic-webfont.eot');
+    src: url('OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('OpenSans-LightItalic-webfont.woff') format('woff'),
+         url('OpenSans-LightItalic-webfont.ttf') format('truetype'),
+         url('OpenSans-LightItalic-webfont.svg#open_sanslight') format('svg');
+}
+
 @media screen and (min-width:1px){
     
     html, body{
@@ -150,24 +161,77 @@
         background-color: transparent;
         line-height: 130px;
     }
+
+    #body{
+        background-color: transparent;  
+        position: relative;
+    }
+    
+    #bodyText{
+        font-size: 23px;
+        font-family:'Open Sans';
+        font-weight: 100;
+        font-style: normal;
+        text-align: center;
+        margin: 0;
+        padding: 6px 0 12px 0;
+        background-color: transparent;
+    }
+
     /***********END universal page (level 0) sections************/
 
 
     /***********START home page (level 0) sections************/  
-    #photoScroller {
-        background-color: transparent;
-        position: relative;
-        display: flex;
+
+    /*Photoscroller classes and ids are below in their own section*/
+
+    #bodyImageContainer{
+        position: relative;    
         height: 539px;
-        width: 1200px;
-        overflow: hidden;
-        margin-left: auto;
-        margin-right: auto;
-        align-content: center;
-        justify-content: center;
     }
 
-    #photoScroller img:hover{
+    #bodyImageContainer:hover #imageHoverOverlay{
+        opacity: .4;
+    }
+
+    #bodyImageContainer:hover #imageHoverText{
+        opacity: 1.0;
+    }
+
+    #bodyImage {
+        background-color: transparent;
+        position: absolute;
+        height: 539px;
+        width: 1200px;
+        margin: 0;
+        padding: 0;
+        float: none;
+        z-index: 14;
+    }
+
+    #imageHoverText{
+        position: absolute;
+        font-size: 26px;
+        color: #ffffff;
+        font-family: 'Open Sans';
+        font-weight: 100;       
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        z-index: 15;
+    }
+
+    #imageHoverOverlay{
+        position: absolute;
+        height: 539px;
+        width: 1200px;
+        background-color: #000000;
+        opacity: 0;
+        z-index: 14;
+    }
+
+    #imageHoverOverlay:hover{
         cursor: pointer;
     }
 
@@ -176,80 +240,74 @@
         font-family: 'Open Sans';
         font-weight: 100;
         text-align: center;
-        margin: 70px 0 12px 0;  
+        margin: 40px 0 12px 0;  /*used to be 70px on top*/
         padding: 0;
     }
     /***********END home page (level 0) sections************/
 
 
-    /***********START level 1 page sections**********/
-    #body{
+    /***********START 1 page sections**********/
+    #subPageRow{
+        display: flex;
+        justify-content: center;
+    }
+    
+    #subPageBody{
         background-color: transparent;  
         position: relative;
     }
 
-    #bodyNav{
+    #subPageBodyImageContainer{
         background-color: transparent;
-        position: relative;
-        height: 60px;
-        text-align: center;
-        padding: 50px 0 0 0;
-        margin: 0;
-    }
-    
-    #bodyButton{
-        position: relative;
-        background-color: transparent;
-        border: 1px solid black;
-        border-radius: 5px;
-        height: 45px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0 20px 0 20px;
+        position: relative;    
+        height: 380px;
+        width: 380px;
+        margin: 10px;
     }
 
-    #bodyButton:hover{
+    #subPageBodyImageContainer:hover #subPageImageHoverOverlay{
+        opacity: .4;
         cursor: pointer;
-     }
-    #bodyButton:focus{
-        outline: none;
     }
 
-    /* Change button text on hover + focus*/
-    #bodyButton:hover #buttonText{
-        font-size: 27px;
-        font-family: 'Open Sans';
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    #bodyButton:focus #buttonText{
-        font-size: 27px;
-        font-family: 'Open Sans';
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0;
+    #subPageBodyImageContainer:hover #subPageImageHoverText{
+        opacity: 1.0;
     }
 
-    #bodyImage{
+    #subPageBodyImage {
         background-color: transparent;
-        position: relative;
-        height: 539px;
-        width: 1200px;
+        position: absolute;
+        height: 380px;
+        width: 380px;
         margin: 0;
         padding: 0;
         float: none;
+        z-index: 14;
     }
 
-    #bodyImage:hover {
-        cursor: pointer;
-        /*transform: scale(1.008);*/
+    #subPageImageHoverText{
+        position: absolute;
+        font-size: 26px;
+        color: #ffffff;
+        font-family: 'Open Sans';
+        font-weight: 100;       
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        opacity: 0;
+        z-index: 15;
     }
 
-    #bodyText{
+    #subPageImageHoverOverlay{
+        position: absolute;
+        height: 380px;
+        width: 380px;
+        background-color: #000000;
+        opacity: 0;
+        z-index: 14;
+    }
+    
+    #subPageBodyText{
         font-size: 23px;
         font-family:'Open Sans';
         font-weight: 100;
@@ -262,7 +320,7 @@
     /***********END level 1 page sections**********/
     
 
-    /*********START leve 2 page sections**********/
+    /*********START level 2 page sections**********/
     #contentTitleText{
        font-size: 26px;
         font-family: 'Open Sans';
@@ -296,7 +354,24 @@
 
 
     /********START photoScroller image setup + identification classes*******/
-    #photoScroller img{
+    #photoScroller {
+        background-color: transparent;
+        position: relative;
+        display: flex;
+        height: 539px;
+        width: 1200px;
+        overflow: hidden;
+        margin: 0 auto 0 auto;
+        padding: 0;
+        align-content: center;
+        justify-content: center;
+    }
+
+    #photoScroller #bodyImageContainer:hover {
+        cursor: pointer
+    }
+    
+    #photoScroller #bodyImageContainer {
         width: 1200px;
         height: 539px;
         position: absolute;
@@ -305,24 +380,24 @@
         padding: 0;
         margin: 0;
         z-index: 8;
-        /*opacity: 0.0;  /* Causes images to jump for first cycle FIX THIS!!!!!! */
     }
 
-    #photoScroller img.active {
+    #photoScroller #bodyImageContainer.active {
         z-index: 10;
         opacity: 1.0;
     }  
 
-    #photoScroller img.inactive {
+    #photoScroller #bodyImageContainer.inactive {
         z-index: 9;
         opacity: 1.0;
     }
 
-    #photoScroller img.home {} 
+    #photoScroller #bodyImageContainer.home {} 
 
-    #photoScroller img.projects {}
+    #photoScroller #bodyImageContainer.projects {}
 
-    #photoScroller img.photography {}
+    #photoScroller #bodyImageContainer.photography {}
+
     /********END photoScroller image setup + identification classes*******/
 
      
