@@ -105,15 +105,24 @@
     <script>
         
         //function to determine which button is being hovered or focused
-        function buttonDetect() {
+        function hoverDetect() {
             var $button = $('div#nav button'); //**Button is the html tag, button is the class** Either works. Use class name because?
+            var $active = $('div#photoScroller #bodyImageContainer.active');
 
             ($button).mouseenter(function () {
-                $buttonState = $(this).attr('class');
+                $hoverState = $(this).attr('class');
+            });
+
+            ($active).mouseenter(function () {
+                $hoverState = $(this).attr('class');
+            });
+
+            ($active).mouseleave(function () {
+                $hoverState = null;
             });
 
             ($button).mouseleave(function () {
-                $buttonState = null;
+                $hoverState = null;
             });
         }
         
@@ -140,9 +149,12 @@
                 $next = $first; //set the next image to the first image
             }
 
-            if ($buttonState == null) {
+            if ($hoverState == null) {
                 switchImage($active, $next, 1000);
             }
+
+            //PUT BOLDED BUTTON TEXT HERE???? SWITCH CASE
+
         }
         
         //function to change images in the slideshow when button is hovered
@@ -153,9 +165,9 @@
             var $projects = $('div#photoScroller #bodyImageContainer.projects');
             var $photography = $('div#photoScroller #bodyImageContainer.photography');
 
-            buttonDetect();
+            hoverDetect();
 
-            switch ($buttonState) {
+            switch ($hoverState) {
 
                 case 'home':
                     if (!$home.hasClass('active')) {
@@ -177,7 +189,7 @@
             }
         }
 
-        var $buttonState; //global button state var
+        var $hoverState; //global hover state var
         
         setInterval("switchOnHover()", 100); //check button and switch image if necassary      
 
