@@ -33,6 +33,7 @@
     
     html, body{
         height: 100%;
+        width: auto;
         margin: 0;
         padding: 0;
         background-color: white;
@@ -43,21 +44,23 @@
     #wrapper{
         background-color: transparent; 
         position: relative;
-        width: 1200px; 
-        margin-left: auto;
-        margin-right: auto;   
+        width: auto; 
+        margin-left: 15%;
+        margin-right: 15%;   
     }
 
     #header{
         background-color: transparent;  
         position: relative;
         height: 130px; 
+        width: auto;
     }
 
     #nav{
         background-color: transparent;
         position: relative;
         height: 60px;
+        width: auto;
         /*display: flex;
         justify-content: center;*/
 
@@ -106,7 +109,7 @@
         background-color: transparent;
         border: 0px solid black;
         height: 60px;
-        width: 400px;
+        width: 33.33%;
         float: left;
         padding-right: 25px;
         padding-left: 25px;
@@ -188,6 +191,7 @@
     #bodyImageContainer{
         position: relative;    
         height: 539px;
+        width: 100%;
     }
 
     #bodyImageContainer:hover #imageHoverOverlay{
@@ -202,7 +206,7 @@
         background-color: transparent;
         position: absolute;
         height: 539px;
-        width: 1200px;
+        max-width: 100%;
         margin: 0;
         padding: 0;
         float: none;
@@ -225,7 +229,7 @@
     #imageHoverOverlay{
         position: absolute;
         height: 539px;
-        width: 1200px;
+        max-width: 100%;
         background-color: #000000;
         opacity: 0;
         z-index: 14;
@@ -348,7 +352,7 @@
     #contentImage{
         background-color: transparent;
         position: relative;
-        width: 1200px;
+        width: 100%;
         height: auto;
         margin: 0;
         padding: 0;
@@ -363,7 +367,7 @@
         position: relative;
         display: flex;
         height: 539px;
-        width: 1200px;
+        max-width: 100%;
         overflow: hidden;
         margin: 0 auto 0 auto;
         padding: 0;
@@ -376,7 +380,7 @@
     }
     
     #photoScroller #bodyImageContainer {
-        width: 1200px;
+        max-width: 100%;
         height: 539px;
         position: absolute;
         top: 0;
@@ -402,329 +406,6 @@
 
     #photoScroller #bodyImageContainer.photography {}
 
-    /********END photoScroller image setup + identification classes*******/
-
-     
-   
-    
-    /***********START email styling***********/
-    #email{
-        color: #5C5CAD;
-        text-decoration: none;
-        background-color: transparent;
-        border: 0px solid #8585AD;
-    }
-
-    /*DO SOMETHING ELSE TO SIGNIFY FOCSUS*/
-    #email:focus{
-        color: black; 
-        outline: none;
-    }
-
-    #email:hover{
-        color: black;
-        cursor: pointer;
-    }
-    /***********END email styling***********/
-
-
-}
-
-@media screen and (max-width:1px){
-    
-    html, body{
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        background-color: white;
-    }
-
-    /***********START universal page (level 0) sections************/
-    #wrapper{
-        background-color: transparent; 
-        position: relative;
-        width: 100%; 
-        margin-left: auto;
-        margin-right: auto;   
-    }
-
-    #header{
-        background-color: transparent;  
-        position: relative;
-        height: 130px; 
-    }
-
-    #nav{
-        background-color: transparent;
-        position: relative;
-        height: 60px;
-        border-bottom: 1px solid black; 
-    }
-
-    #footer{
-        background-color: transparent; 
-        position: relative;
-        height: 130px;    
-    }
-
-    #headerText{
-        font-size: 99px;
-        font-family:'Open Sans';
-        font-weight: 100;
-        font-style: normal;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        line-height: 130px;
-        
-    }
-
-    #hamburger{
-        height: 60px;
-        width: auto;
-        position: relative;
-        background-color: transparent;
-        border: 0px solid black;
-        float: right;
-        padding-right: 25px;
-        padding-left: 25px;
-    }
-
-    #hamburger:hover{
-        cursor: pointer;
-    }
-
-    /*CHANGE width to auto and make buttons absolute */
-    #button{
-        position: relative;
-        background-color: transparent;
-        border: 0px solid black;
-        height: 60px;
-        width: 205px;
-        float: left;
-        padding-right: 25px;
-        padding-left: 25px;
-        visibility: hidden;
-    }
-
-    #button:hover{
-        cursor: pointer;
-     }
-    #button:focus{
-        outline: none;
-    }
-        
-    .home{} 
-    .projects{}
-    .photography{}
-
-    #buttonText{
-        font-size: 26px;
-        font-family: 'Open Sans';
-        font-weight: 100;
-        text-align: center;
-        margin: auto 0 auto 0;
-        padding: 0;
-    }
-
-    /* Change button text on hover + focus*/
-    #button:hover #buttonText{
-        font-size: 27px;
-        font-family: 'Open Sans';
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    #button:focus #buttonText{
-        font-size: 27px;
-        font-family: 'Open Sans';
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    #footerText{
-        font-size: 24px;
-        font-family: 'Open Sans';
-        font-weight: 100;
-        font-style: normal;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        background-color: transparent;
-        line-height: 130px;
-    }
-    /***********END universal page (level 0) sections************/
-
-
-    /***********START home page (level 0) sections************/  
-    #photoScroller {
-        background-color: transparent;
-        position: relative;
-        display: flex;
-        width: 1200px;
-        height: auto;
-        margin-left: auto;
-        margin-right: auto;
-        align-content: center;
-        justify-content: center;
-    }
-
-    #bodyTitleText{
-        font-size: 26px;
-        font-family: 'Open Sans';
-        font-weight: 100;
-        text-align: center;
-        margin: 70px 0 12px 0;  
-        padding: 0;
-    }
-    /***********END home page (level 0) sections************/
-
-
-    /***********START level 1 page sections**********/
-    #body{
-        background-color: transparent;  
-        position: relative;
-    }
-
-    #bodyNav{
-        background-color: transparent;
-        position: relative;
-        height: 60px;
-        text-align: center;
-        padding: 50px 0 0 0;
-        margin: 0;
-    }
-    
-    #bodyButton{
-        position: relative;
-        background-color: transparent;
-        border: 2px solid black;
-        border-radius: 10px;
-        height: 60px;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 0;
-    }
-
-    #bodyButton:hover{
-        cursor: pointer;
-     }
-    #bodyButton:focus{
-        outline: none;
-    }
-
-    /* Change button text on hover + focus*/
-    #bodyButton:hover #buttonText{
-        font-size: 27px;
-        font-family: 'Open Sans';
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    #bodyButton:focus #buttonText{
-        font-size: 27px;
-        font-family: 'Open Sans';
-        font-weight: 400;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    #bodyImage{
-        background-color: transparent;
-        position: relative;
-        height: 539px;
-        width: 1200px;
-        margin: 0;
-        padding: 0;
-        float: none;
-    }
-
-    #bodyImage:hover {
-        cursor: pointer;
-        transform: scale(1.008);
-    }
-
-    #bodyText{
-        font-size: 23px;
-        font-family:'Open Sans';
-        font-weight: 100;
-        font-style: normal;
-        text-align: center;
-        margin: 0;
-        padding: 6px 0 12px 0;
-        background-color: transparent;
-    }
-    /***********END level 1 page sections**********/
-    
-
-    /*********START leve 2 page sections**********/
-    #contentTitleText{
-       font-size: 26px;
-        font-family: 'Open Sans';
-        font-weight: 100;
-        text-align: center;
-        margin: 70px 0 12px 0;  
-        padding: 0;
-    }
-
-    #contentText{
-        font-size: 23px;
-        font-family:'Open Sans';
-        font-weight: 100;
-        font-style: normal;
-        text-align: center;
-        margin: 0;
-        padding: 6px 0 12px 0;
-        background-color: transparent;
-    }
-    
-    #contentImage{
-        background-color: transparent;
-        position: relative;
-        width: 1200px;
-        height: auto;
-        margin: 0;
-        padding: 0;
-        float: none;
-    }
-    /*********END leve 2 page sections**********/
-
-
-    /********START photoScroller image setup + identification classes*******/
-    #photoScroller img{
-        width: 1200px;
-        height: 539px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        z-index: 8;
-        /*opacity: 0.0;  /* Causes images to jump for first cycle FIX THIS!!!!!! */
-    }
-
-    #photoScroller img.active {
-        z-index: 10;
-        opacity: 1.0;
-    }  
-
-    #photoScroller img.inactive {
-        z-index: 9;
-        opacity: 1.0;
-    }
-
-    #photoScroller img.home {} 
-
-    #photoScroller img.projects {}
-
-    #photoScroller img.photography {}
     /********END photoScroller image setup + identification classes*******/
 
      
