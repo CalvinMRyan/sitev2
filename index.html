@@ -23,8 +23,8 @@
             <button id="button" onclick="location.href='index.html'" class="home">
                 <p id="buttonText" class="home">Home</p>
             </button>
-            <button id="button" onclick="location.href='projects.html'" class="projects">
-                <p id="buttonText"class="projects">Projects</p>
+            <button id="button" onclick="location.href='trips.html'" class="reports">
+                <p id="buttonText">Trip Reports</p>
             </button>
             <button id="button" onclick="location.href='photography.html'" class="photography">
                 <p id="buttonText" class="photography">Photography</p>
@@ -33,51 +33,55 @@
         
         <div id="body">
 
-            <div style="height:54px;"></div> 
+            <!-- <div style="height:54px;"></div>  -->
 
+            <div>
             <div id="photoScroller">
                 
                 <div id="bodyImageContainer" onclick="location.href='index.html'" class="home active">
-                    <img id="bodyImage" src="images/home.jpg"/>
                     <div id="imageHoverOverlay"></div>
-                    <p id="imageHoverText" style="text-align: left; top: 120px; left: 100px; font-weight: 400;"> Home </p>
-                    <p id="imageHoverText" style="text-align: left; top: 120px; left: 100px; margin-right: 40px; font-weight: 100;"><br/><br/> Learn a bit about me.</p>
-
+                    <img id="bodyImage" src="images/home.jpg"/>
+                    <p id="imageHoverText" style="text-align: left; top: 12%; left: 10%; font-weight: 400;"> Home </p>
+                    <p id="imageHoverText" style="text-align: left; top: 12%; left: 10%; margin-right: 40px; font-weight: 100;"><br/><br/> Learn a bit about me.</p>
                 </div>
 
 
-                <div id="bodyImageContainer" onclick="location.href='projects.html'" class="projects">
-                    <img id="bodyImage"src="images/bikelight/bikelight6.jpg"/>
-                    <div id="imageHoverOverlay" ></div>
-                    <p id="imageHoverText" style="text-align: left; top: 120px; left: 100px; font-weight: 400;"> Projects </p>
-                    <p id="imageHoverText" style="text-align: left; top: 120px; left: 100px; margin-right: 40px; font-weight: 100;"><br /><br /> Check out some of my technical projects.</p>
+                <div id="bodyImageContainer" onclick="location.href='trips.html'" class="reports">
+                    <div id="imageHoverOverlay"></div>
+                    <img id="bodyImage"src="images/tripreports_home.png"/>
+                    
+                    <p id="imageHoverText" style="text-align: left; top: 12%; left: 10%; font-weight: 400;"> Trip Reports </p>
+                    <p id="imageHoverText" style="text-align: left; top: 12%; left: 10%; margin-right: 40px; font-weight: 100;"><br /><br /> Check out some of my trips.</p>
+                    
                 </div>
                 
                 <div id="bodyImageContainer" onclick="location.href='photography.html'" class="photography">
+                    <div id="imageHoverOverlay"></div>
                     <img id="bodyImage" src="images/landscapes/landscapes9.jpg"/>
-                    <div id="imageHoverOverlay" ></div>
-                    <p id="imageHoverText" style="text-align: left; top: 120px; left: 100px; font-weight: 400;"> Photography </p>
-                    <p id="imageHoverText" style="text-align: left; top: 120px; left: 100px; margin-right: 40px; font-weight: 100;"><br /><br /> Explore some of my photography.</p>
+                    
+                    <p id="imageHoverText" style="text-align: left; top: 12%; left: 10%; font-weight: 400;"> Photography </p>
+                    <p id="imageHoverText" style="text-align: left; top: 12%; left: 10%; margin-right: 40px; font-weight: 100;"><br /><br /> Explore some of my photography.</p>
+
                 </div>
                
             </div>
+            </div>
 
-            <p id="bodyTitleText"> About me </p>
+            <p id="bodyTitleText" style="margin-top: 46%"> About me </p>
 
-            <p id="bodyText"> I'm Calvin. I'm a fifth year electrical engineering student at Northeastern University in Boston, MA. I have a passion for recognizing problems and pursuing solutions in fields ranging from sustainability to design.    
+            <p id="bodyText"> I'm Calvin. I work at Apple on the Audio Products Team as a Systems Hardware Engineer. I have a passion for recognizing problems and pursuing solutions in fields ranging from sustainability to design.    
             </p>
 
-            <div style="height: 50px"></div>
+            
             
             <p id="bodyText">
                 Get in touch .... <a id="email" href="mailto:me@calvinryan.com" target="_blank">me@calvinryan.com</a>
             </p>
-            
+
         </div>
-        
-       
+            
         <div id="footer">
-            <p id="footerText">&copy 2015 Calvin Ryan</p>
+            <p id="footerText">&copy 2021 Calvin Ryan</p>
         </div>    
         
     </div>
@@ -153,7 +157,7 @@
 
             var $active = $('div#photoScroller #bodyImageContainer.active');
             var $home = $('div#photoScroller #bodyImageContainer.home');
-            var $projects = $('div#photoScroller #bodyImageContainer.projects');
+            var $reports = $('div#photoScroller #bodyImageContainer.reports');
             var $photography = $('div#photoScroller #bodyImageContainer.photography');
             //var $buttonText = $('#buttonText');
 
@@ -167,9 +171,9 @@
                     }
                     break;
 
-                case 'projects':
-                    if (!$projects.hasClass('active')) {
-                        switchImage($active, $projects, 200);
+                case 'reports':
+                    if (!$reports.hasClass('active')) {
+                        switchImage($active, $reports, 200);
                     }
                     break;
 

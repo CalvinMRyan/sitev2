@@ -45,6 +45,7 @@
         background-color: transparent; 
         position: relative;
         width: auto; 
+        height: 100%;
         margin-left: 15%;
         margin-right: 15%;   
     }
@@ -87,11 +88,12 @@
     #footer{
         background-color: transparent; 
         position: relative;
-        height: 130px;    
+        margin-top: 3%;
+        height: 10%;    
     }
 
     #headerText{
-        font-size: 99px;
+        font-size: 4vw;
         font-family:'Open Sans', Arial, Helvetica, sans-serif;
         font-weight: 100;
         font-style: normal;
@@ -123,11 +125,11 @@
     }
     
     .home{} 
-    .projects{}
+    .reports{}
     .photography{}
 
     #buttonText{
-        font-size: 26px;
+        font-size: 1.3vw;
         font-family: 'Open Sans';
         font-weight: 100;
         text-align: center;
@@ -137,7 +139,7 @@
 
     /* Change button text on hover + focus*/
     #button:hover #buttonText{
-        font-size: 27px;
+        font-size: 1.4vw;
         font-family: 'Open Sans';
         font-weight: 400;
         text-align: center;
@@ -145,7 +147,7 @@
         padding: 0;
     }
     #button:focus #buttonText{
-        font-size: 27px;
+        font-size: 1.5vw;
         font-family: 'Open Sans';
         font-weight: 400;
         text-align: center;
@@ -154,7 +156,7 @@
     }
 
     #footerText{
-        font-size: 24px;
+        font-size: 1.2vw;
         font-family: 'Open Sans';
         font-weight: 100;
         font-style: normal;
@@ -162,23 +164,35 @@
         margin: 0;
         padding: 0;
         background-color: transparent;
-        line-height: 130px;
+        line-height: 10%;
     }
 
     #body{
         background-color: transparent;  
         position: relative;
+        border: solid 1px white;
+        margin: 5% auto 5% auto;
     }
     
     #bodyText{
-        font-size: 23px;
+        font-size: 1.1vw;
         font-family:'Open Sans';
         font-weight: 100;
+        position: relative;
         font-style: normal;
         text-align: center;
-        margin: 0;
         padding: 6px 0 12px 0;
         background-color: transparent;
+        justify-content: center
+    }
+
+    #bodyTitleText{
+        font-size: 1.2vw;
+        font-family: 'Open Sans';
+        font-weight: 100;
+        text-align: center;
+        position: relative;
+        
     }
 
     /***********END universal page (level 0) sections************/
@@ -187,73 +201,96 @@
     /***********START home page (level 0) sections************/  
 
     /*Photoscroller classes and ids are below in their own section*/
-
-    #bodyImageContainer{
-        position: relative;    
-        height: 539px;
-        width: 100%;
-    }
-
-    #bodyImageContainer:hover #imageHoverOverlay{
-        opacity: .4;
-    }
-
-    #bodyImageContainer:hover #imageHoverText{
-        opacity: 1.0;
-    }
-
+    
     #bodyImage {
         background-color: transparent;
-        position: absolute;
-        height: 539px;
-        max-width: 100%;
-        margin: 0;
-        padding: 0;
-        float: none;
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        overflow: hidden;
         z-index: 14;
     }
 
     #imageHoverText{
         position: absolute;
-        font-size: 26px;
+        font-size: 1.2vw;
         color: #ffffff;
         font-family: 'Open Sans';
         font-weight: 100;       
         text-align: center;
-        margin: 0;
-        padding: 0;
         opacity: 0;
         z-index: 15;
     }
 
     #imageHoverOverlay{
         position: absolute;
-        height: 539px;
-        max-width: 100%;
+        height: 100%;
+        width: 100%;
         background-color: #000000;
         opacity: 0;
-        z-index: 14;
     }
 
-    #imageHoverOverlay:hover{
+    #bodyImageContainer:hover #imageHoverOverlay{
         cursor: pointer;
+        opacity: .4;
+        z-index: 16;
     }
 
-    #bodyTitleText{
-        font-size: 26px;
-        font-family: 'Open Sans';
-        font-weight: 100;
-        text-align: center;
-        margin: 40px 0 12px 0;  /*used to be 70px on top*/
-        padding: 0;
+    #bodyImageContainer:hover #imageHoverText {
+        opacity: 1;
+        z-index: 17;
     }
+
+
+
     /***********END home page (level 0) sections************/
 
+
+    /********START photoScroller image setup + identification classes*******/
+    #photoScroller {
+        background-color: transparent;
+        position: relative;
+        display: flex;  
+        align-content: center;
+        justify-content: center;
+        opacity: 1;
+        
+    }
+
+
+    #photoScroller #bodyImageContainer {
+        position: absolute;
+        display: flex;
+        height: inherit;
+        width: 100%;
+        z-index: 8;
+    }
+
+    #photoScroller #bodyImageContainer.active {
+        z-index: 10;
+        opacity: 1.0;
+    }  
+
+    #photoScroller #bodyImageContainer.inactive {
+        z-index: 9;
+        opacity: 1.0;
+    }
+
+    #photoScroller #bodyImageContainer.home {} 
+
+    #photoScroller #bodyImageContainer.reports {}
+
+    #photoScroller #bodyImageContainer.photography {}
+
+    /********END photoScroller image setup + identification classes*******/
+
+     
 
     /***********START 1 page sections**********/
     #subPageRow{
         display: flex;
-        justify-content: center;
+        justify-content: left;
     }
     
     #subPageBody{
@@ -264,13 +301,13 @@
     #subPageBodyImageContainer{
         background-color: transparent;
         position: relative;    
-        height: 380px;
-        width: 380px;
-        margin: 10px;
+        height: auto;
+        width: 30%;
+        margin: 1%;
     }
 
-    #subPageBodyImageContainer:hover #subPageImageHoverOverlay{
-        opacity: .4;
+    #subPageBodyImageContainer:hover #subPageBodyImage{
+        opacity: 0.4;
         cursor: pointer;
     }
 
@@ -280,18 +317,19 @@
 
     #subPageBodyImage {
         background-color: transparent;
-        position: absolute;
-        height: 380px;
-        width: 380px;
+        position: relative;
+        height: 100%;
+        width: 100%;
         margin: 0;
         padding: 0;
+        opacity: 1;
         float: none;
         z-index: 14;
     }
 
     #subPageImageHoverText{
         position: absolute;
-        font-size: 26px;
+        font-size: 1.2vw;
         color: #ffffff;
         font-family: 'Open Sans';
         font-weight: 100;       
@@ -308,15 +346,15 @@
 
     #subPageImageHoverOverlay{
         position: absolute;
-        height: 380px;
-        width: 380px;
+        height: 100%;
+        width: 100%;
         background-color: #000000;
-        opacity: 0;
+        opacity: 1;
         z-index: 14;
     }
     
     #subPageBodyText{
-        font-size: 23px;
+        font-size: 1.1vw;
         font-family:'Open Sans';
         font-weight: 100;
         font-style: normal;
@@ -329,86 +367,35 @@
     
 
     /*********START level 2 page sections**********/
-    #contentTitleText{
-       font-size: 26px;
+    .contentTitleText{
+        font-size: 1.3vw;
         font-family: 'Open Sans';
         font-weight: 100;
         text-align: center;
-        margin: 70px 0 12px 0;  
-        padding: 0;
     }
 
     #contentText{
-        font-size: 23px;
+        font-size: 1.1vw;
         font-family:'Open Sans';
         font-weight: 100;
         font-style: normal;
         text-align: center;
-        margin: 0;
-        padding: 6px 0 12px 0;
+        padding-bottom: 1%;
         background-color: transparent;
     }
     
     #contentImage{
         background-color: transparent;
         position: relative;
-        width: 100%;
+        width: 85%;
         height: auto;
-        margin: 0;
-        padding: 0;
+        margin-left: 7.5%;
+        padding-bottom: 3%; 
         float: none;
     }
     /*********END leve 2 page sections**********/
 
 
-    /********START photoScroller image setup + identification classes*******/
-    #photoScroller {
-        background-color: transparent;
-        position: relative;
-        display: flex;
-        height: 539px;
-        max-width: 100%;
-        overflow: hidden;
-        margin: 0 auto 0 auto;
-        padding: 0;
-        align-content: center;
-        justify-content: center;
-    }
-
-    #photoScroller #bodyImageContainer:hover {
-        cursor: pointer
-    }
-    
-    #photoScroller #bodyImageContainer {
-        max-width: 100%;
-        height: 539px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: 0;
-        margin: 0;
-        z-index: 8;
-    }
-
-    #photoScroller #bodyImageContainer.active {
-        z-index: 10;
-        opacity: 1.0;
-    }  
-
-    #photoScroller #bodyImageContainer.inactive {
-        z-index: 9;
-        opacity: 1.0;
-    }
-
-    #photoScroller #bodyImageContainer.home {} 
-
-    #photoScroller #bodyImageContainer.projects {}
-
-    #photoScroller #bodyImageContainer.photography {}
-
-    /********END photoScroller image setup + identification classes*******/
-
-     
    
     
     /***********START email styling***********/
