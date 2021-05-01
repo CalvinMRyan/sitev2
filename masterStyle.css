@@ -384,14 +384,19 @@
         background-color: transparent;
     }
     
+    #contentImageWrapper{
+        position: relative;
+        height: 0;
+    }
+
     #contentImage{
         background-color: transparent;
-        position: relative;
-        width: 85%;
+        position: absolute;
+        max-width: 85%;
         height: auto;
         margin-left: 7.5%;
         padding-bottom: 3%; 
-        float: none;
+        
     }
     /*********END leve 2 page sections**********/
 
